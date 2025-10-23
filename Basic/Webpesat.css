@@ -21,6 +21,7 @@ body{
     align-items: center;
     height: 50px;
     justify-content: space-between;
+    margin: 30px;
 
 
 }
@@ -31,6 +32,7 @@ body{
     margin: 20px;
     text-align: center;
     color: #ffffff;
+    display: inline;
 }
 .navbar{
     display: flex;
@@ -249,7 +251,7 @@ ul{
 .porto-click p{
     color: white;
 }
-.foto img{
+.foto img{   
 
     size: 100%;
     display: flex;
@@ -263,4 +265,25 @@ ul{
     
     background-color: #f0f0f0;
     
+}
+.porto-rpl{
+    display: flex;
+    justify-content: end;
+    margin: 50px 0px 20px 0px;
+    padding: 12px 24px;
+
+
+    font-weight: 700;
+}
+.perusahaan{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0px;
+}
+.perusahaan p{
+    font-size: medium;
+    color: #0C084C;
+    font-weight: bold;
+
 }
