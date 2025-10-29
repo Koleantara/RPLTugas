@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: yellow;
+  padding: 20px;
+  float: left;
+  width: 33%; /* The width is 20%, by default */
+  font-size: 30px;
+}
+
+.main {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  float: left;
+  width: 33%; /* The width is 60%, by default */
+  font-size: 30px;
+}
+
+.right {
+  background-color: orange;
+  padding: 20px;
+  float: left;
+  width: 33%; /* The width is 20%, by default */
+  font-size: 30px;
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+   display: collumn;
+   margin: 5px 0px;
+  }
+  .right {
+   display: collumn;
+   margin: 5px 0px;
+  }
+  .left {
+   display: collumn;
+   margin: 5px 0px;
+  }
+}
+
+</style>
+</head>
+<body>
+    <div class="jurusan">
+        <div class="left">
+            <p align="center">RPL</p>
+        </div>
+
+        <div class="main">
+            <p align="center">DKV</p>
+        </div>
+
+        <div class="right">
+            <p align="center">TKJ</p>
+        </div>
+
+    </div>
+</body>
+</html>

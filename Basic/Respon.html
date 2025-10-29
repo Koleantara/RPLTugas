@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: #2196F3;
+  padding: 20px;
+  float: left;
+  width: 33%; 
+}
+.right {
+  background-color: #04AA6D;
+  padding: 20px;
+  float: right;
+  width: 33%; 
+}
+#div1 {
+  background-color: yellow;
+  display: flex;
+  padding: 20px;
+  float: middle;
+  width: 33%; 
+}
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 430px) {
+  .left, #div1 .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+@media screen and (max-width: 600px) {
+  #div1 {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+<div class="left">
+  <p>Left Menu</p>
+</div>
+<div id="div1">
+    <p>Middle Menu</p>
+</div>
+<div class="right">
+  <p>Right Content</p>
+</div>
+
+
+</body>
+</html>
