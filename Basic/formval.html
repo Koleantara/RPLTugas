@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root
+        {
+            --main-bg-color: #f0f0f0;
+            --text-color: #333333;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #myform {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+
+        }
+        body {
+            background-color: var(--main-bg-color);
+            font-family: var(--font-family);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        #grup {
+            margin-bottom: 15px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1.5px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+            transition: 0.3s;
+            box-shadow: 0 0 5px #4CAF50;
+        }
+        input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            transition: 0.3s;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Validasi</h2>
+        <form id="myform" action="">
+            <div id="grup">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" placeholder="Username...."><br><br>
+                <div class="error" id="username_error"></div>
+  
+           
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Email...."></i><br><br> 
+                <div class="error" id="email_error"></div>
+
+                
+ 
+                 <label for="Password">Password</label><br>
+                <input type="password" id="password" name="password" placeholder="Atleast 6 Character" ><br><br>
+                <div class="error" id="password_error"></div>
+            </div>
+               
+                <button type="submit">Daftar</button>
+            </div>
+            
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('myform');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+
+        const username_error = document.getElementById('username_error');
+        const email_error = document.getElementById('email_error');
+        const password_error = document.getElementById('password_error');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Clear previous error messages
+            username_error.textContent = '';
+            email_error.textContent = '';
+            password_error.textContent = '';
+
+            // Validate Username
+            if (username.value.trim().length < 3) {
+                username_error.textContent = 'Username must be at least 3 characters long.';
+                isValid = false;
+            }
+
+            // Validate Email
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (email.value.match(emailPattern)) {
+                email_error.textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Validate Password
+            if (password.value.length < 6) {
+                password_error.textContent = 'Password must be at least 6 characters long.';
+                isValid = false;
+            }
+
+            // If any validation fails, prevent form submission
+            if (!isValid) {
+            }
+        });
+    </script>
+</body>
+</html>

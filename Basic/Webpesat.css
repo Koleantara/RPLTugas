@@ -293,6 +293,29 @@ ul{
 .perusahaan img{
     width: 10%;
 }
+.Join p{
+    background-color:white;
+    color: #0C084C;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #0C084C;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+.Wow p{
+    background-color: #0C084C;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #0C084C;
+    font-weight: 500;
+}
 @media screen and (max-width: 600px) {
     .hero{
         flex-direction: column;
